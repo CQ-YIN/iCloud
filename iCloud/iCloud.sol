@@ -2,32 +2,33 @@
 pragma solidity ^0.8.9;
 
 contract iCloud{
+    uint8 public rain;
+    uint8 public rose;
+    uint8 public bitcoin;
 
-    uint8 public red; //0-255
-    uint8 public blue;
-    uint8 public green;
-
-    function setRed(uint8 _red) public {
-        red = _red;
+    function setRain(uint8 _rain) public {
+        rain = _rain;
     }
 
-    function setBlue(uint8 _blue) public {
-        blue = _blue;
+    function setRose(uint8 _rose) public {
+        rose = _rose;
     }
 
-    function setGreen(uint8 _green) public {
-        green = _green;
+    function setBitcoin(uint8 _bitcoin) public {
+        bitcoin = _bitcoin;
     }
 
-    function getRed() public view returns (uint8){
-        return red; 
+
+    function getRain() public view returns (uint8){
+        return rain; 
     }
 
-    function getBlue() public view returns (uint8){
-        return blue; 
+    function getRose() public view returns (uint8){
+        return rose; 
+    }
+     
+    function getBitcoin() public view returns (uint8){
+        return bitcoin; 
     }
 
-    function getGreen() public view returns (uint8){
-        return green; 
-    }
 }

@@ -1,14 +1,14 @@
-let contractAddress = "0x6C68092c97aF00FAd95Eb36E991799303A6f5934";
+let contractAddress = "0xaD7a18ab4bBeC901F6f40578d6174E2636dd4233";
 let contractABI = [
 	{
 		"inputs": [
 			{
 				"internalType": "uint8",
-				"name": "_blue",
+				"name": "_bitcoin",
 				"type": "uint8"
 			}
 		],
-		"name": "setBlue",
+		"name": "setBitcoin",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -17,11 +17,11 @@ let contractABI = [
 		"inputs": [
 			{
 				"internalType": "uint8",
-				"name": "_green",
+				"name": "_rain",
 				"type": "uint8"
 			}
 		],
-		"name": "setGreen",
+		"name": "setRain",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -30,18 +30,18 @@ let contractABI = [
 		"inputs": [
 			{
 				"internalType": "uint8",
-				"name": "_red",
+				"name": "_rose",
 				"type": "uint8"
 			}
 		],
-		"name": "setRed",
+		"name": "setRose",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "blue",
+		"name": "bitcoin",
 		"outputs": [
 			{
 				"internalType": "uint8",
@@ -54,7 +54,7 @@ let contractABI = [
 	},
 	{
 		"inputs": [],
-		"name": "getBlue",
+		"name": "getBitcoin",
 		"outputs": [
 			{
 				"internalType": "uint8",
@@ -67,7 +67,7 @@ let contractABI = [
 	},
 	{
 		"inputs": [],
-		"name": "getGreen",
+		"name": "getRain",
 		"outputs": [
 			{
 				"internalType": "uint8",
@@ -80,7 +80,7 @@ let contractABI = [
 	},
 	{
 		"inputs": [],
-		"name": "getRed",
+		"name": "getRose",
 		"outputs": [
 			{
 				"internalType": "uint8",
@@ -93,7 +93,7 @@ let contractABI = [
 	},
 	{
 		"inputs": [],
-		"name": "green",
+		"name": "rain",
 		"outputs": [
 			{
 				"internalType": "uint8",
@@ -106,7 +106,7 @@ let contractABI = [
 	},
 	{
 		"inputs": [],
-		"name": "red",
+		"name": "rose",
 		"outputs": [
 			{
 				"internalType": "uint8",

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    font-family: 'Courier New', Courier;
+    background-color: beige;
+}
+
+#messages {
+    margin-top: 2rem;
+}
+
+.message {
+    margin: 0;
+    font-size: 3rem;
+    line-height: .8;
+}
+
+input {
+    font-family: inherit;
+    width: 60%;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+}

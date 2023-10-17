@@ -1,0 +1,25 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
+
+#messages {
+    margin-top: 2rem;
+}
+
+.message {
+    margin: 0;
+    font-size: 3rem;
+    line-height: .8;
+}
+
+input {
+    font-family: inherit;
+    width: 60%;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}

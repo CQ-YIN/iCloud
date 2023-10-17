@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../blockchain-fa23"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "iCloud"
+	}
+}

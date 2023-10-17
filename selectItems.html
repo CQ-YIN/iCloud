@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/ethers-5.6.umd.min.js"></script>
+    <script src="lib/jquery-3.6.1.min.js"></script>
+    <script src="abi.js"></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>iCloud</title>
+
+</head>
+<body>
+    <center>
+    <div class="item">
+        <label for="raindrops">Number of Raindrops:</label>
+        <input type="number" id="raindrops" name="raindrops" min="1" max="50">
+    </div>
+    <div class="item">
+        <label for="roses">Number of Roses:</label>
+        <input type="number" id="roses" name="roses" min="1" max="50">
+    </div>
+    <div class="item">
+        <label for="bitcoins">Number of Bitcoins:</label>
+        <input type="number" id="bitcoins" name="bitcoins" min="1" max="50">
+    </div>
+    <button onclick="displayItems()">Display Items</button>
+
+    <div id="container"></div>
+
+    <script>
+        function displayItems() {
+            const raindrops = document.getElementById('raindrops').value;
+            const roses = document.getElementById('roses').value;
+            const bitcoins = document.getElementById('bitcoins').value;
+            const container = document.getElementById('container');
+            container.innerHTML = '';
+
+            for (let i = 0; i < raindrops; i++) {
+                const img = document.createElement('img');
+                <img.src = 'rain.png'>;
+                container.appendChild(img);
+            }
+
+            for (let i = 0; i < roses; i++) {
+                const img = document.createElement('img');
+                img.src = 'rose.png';
+                container.appendChild(img);
+            }
+
+            for (let i = 0; i < bitcoins; i++) {
+                const img = document.createElement('img');
+                img.src = 'bitcoin.png';
+                container.appendChild(img);
+            }
+        }
+    </script>
+    </center>
+</body>
+</html>

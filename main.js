@@ -46,7 +46,7 @@ async function main() {
 
     // create event listener to listen for contract event here
   contract.on("imageSelected",(selectedImage, rain, rose, bitcoin)=>{   
-    console.log('you get the rain: ${rain}, ${rose}, ${bitcoin}')
+    console.log('you got the rain: ${rain}, ${rose}, ${bitcoin}')
 
     //Update images
     let imageUrl;
@@ -63,22 +63,9 @@ async function main() {
 });
 
 async function selectRandomImage() {
-
-   // when event is receieved, print out the 3 pieces of information
-
-
+    await contractWithSigner.getImage();
   }
-  
+    // when event is receieved, print out the 3 pieces of information 
 }
     
 
-
-//  // event listener that triggers when any of the three color values is changed in the contract
-//  contract.on("colorSetEvent", (redValue, greenValue, blueValue) => {
-     
-//      // set the background color of the page with the red, green and blue values stored in the contract
-//      $('body').css('background-color', `rgb(${redValue}, ${greenValue}, ${blueValue})`);
-
-//      // print a note to our JavaScript console letting us know that the color changed.
-//      console.log(`Color was changed, the new background color is: ${redValue}, ${greenValue}, ${blueValue}`);
-//  })    

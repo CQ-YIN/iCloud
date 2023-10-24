@@ -2,6 +2,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: large;
+
 }
 
 #messages {
@@ -22,4 +23,31 @@ input {
 button {
     font-family: 'Montserrat', sans-serif;
     font-size: large;
+    shape-outside: none; 
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.falling {
+    animation: fall 1s ease-in-out forwards;
+}
+
+#rain-container, #rose-container, #bitcoin-container {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
 }

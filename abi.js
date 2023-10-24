@@ -1,4 +1,4 @@
-let contractAddress = "0xDE44E5ad840acEde5a02972154a1EF19E574Aba4";
+let contractAddress = "0x5656001feE8a9F5528256065E8b95Ae5143DBcdC";
 let contractABI = [
 	{
 		"inputs": [],
@@ -24,21 +24,21 @@ let contractABI = [
 			},
 			{
 				"indexed": false,
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "_rain",
-				"type": "uint8"
+				"type": "uint256"
 			},
 			{
 				"indexed": false,
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "_rose",
-				"type": "uint8"
+				"type": "uint256"
 			},
 			{
 				"indexed": false,
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "_bitcoin",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"name": "imageSelected",
@@ -88,9 +88,9 @@ let contractABI = [
 		"name": "bitcoin",
 		"outputs": [
 			{
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -101,9 +101,9 @@ let contractABI = [
 		"name": "getBitcoin",
 		"outputs": [
 			{
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -114,9 +114,9 @@ let contractABI = [
 		"name": "getRain",
 		"outputs": [
 			{
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -127,9 +127,9 @@ let contractABI = [
 		"name": "getRose",
 		"outputs": [
 			{
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -140,9 +140,9 @@ let contractABI = [
 		"name": "rain",
 		"outputs": [
 			{
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -153,9 +153,9 @@ let contractABI = [
 		"name": "rose",
 		"outputs": [
 			{
-				"internalType": "uint8",
+				"internalType": "uint256",
 				"name": "",
-				"type": "uint8"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",

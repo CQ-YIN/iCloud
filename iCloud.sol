@@ -2,11 +2,11 @@
 pragma solidity ^0.8.9;
 
 contract iCloud {
-    uint8 public rain = 1;
-    uint8 public rose = 1;
-    uint8 public bitcoin = 1;
+    uint256 public rain = 1;
+    uint256 public rose = 1;
+    uint256 public bitcoin = 1;
 
-    event imageSelected(string selectedImage, uint8 _rain, uint8 _rose, uint8 _bitcoin);
+    event imageSelected(string selectedImage, uint _rain, uint _rose, uint _bitcoin);
 
     function setRain(uint8 _rain) public {
         rain = _rain;
@@ -22,10 +22,10 @@ contract iCloud {
 
    
     function getImage() public returns (string memory) {
-        uint8 total = rain + rose + bitcoin;
+        uint256 total = rain + rose + bitcoin;
         require(total > 0, "No drops");
 
-        uint8 random = uint8(uint256(keccak256(abi.encodePacked(block.timestamp, block.prevrandao))) % total);
+        uint8 random = uint8(uint256(keccak256(abi.encodePacked(block.timestamp, block.prevrandao))) % total)/10;
         string memory selectedImage;
 
         if (random < rain) {
@@ -43,19 +43,21 @@ contract iCloud {
         emit imageSelected(selectedImage, rain, rose, bitcoin);
 
                return selectedImage;
+
+        //why
     }
 
     // update currency amount depending on which one was randomly chosen
      
-     function getRain() public view returns (uint8){
+     function getRain() public view returns (uint256){
         return rain; 
     }
 
-    function getRose() public view returns (uint8){
+    function getRose() public view returns (uint256){
         return rose; 
     }
      
-    function getBitcoin() public view returns (uint8){
+    function getBitcoin() public view returns (uint256){
         return bitcoin; 
     }
 

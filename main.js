@@ -15,57 +15,76 @@ async function main() {
     contractWithSigner = contract.connect(signer);
 
 
-    $('#newImageButton').click(selectRandomImage);
+    $('#newImageButton').click(function(){
+        contractWithSigner.getImage();
+    });
 
-    // async function selectRandomImage() {
-    //      const rain = await contract.getRain()
-    //      const rose = await contract.getRose()
-    //      const bitcoin = await contract.getBitcoin()
-
-    //      console.log(rain, rose, bitcoin);
-
-
-    //     const total = rain + rose + bitcoin;
-    //     const random = Math.floor(Math.random() * total);
-        
-    //     let selectedImage;
-    //     if (random < rain) {
-    //         selectedImage = 'rain.png'; 
-    //     } else if (random < rain + rose) {
-    //         selectedImage = 'rose.png'; 
-    //     } else {
-    //         selectedImage = 'bitcoin.jpg'; 
-    //     }
-
-
-    //     $('#selected-image').attr("src", selectedImage)
-    //     $('#selected-image').css("display", "block");
-        
-    // }
-
-
+   
     // create event listener to listen for contract event here
   contract.on("imageSelected",(selectedImage, rain, rose, bitcoin)=>{   
-    console.log('you got the rain: ${rain}, ${rose}, ${bitcoin}')
+   
 
     //Update images
     let imageUrl;
+    console.log(selectedImage)
     if (selectedImage === "rain") {
         imageUrl = 'rain.png';
     } else if (selectedImage === "rose") {
         imageUrl = 'rose.png';
     } else {
-        imageUrl = 'bitcoin.jpg'; // Change the file extension as per your actual file
+        imageUrl = 'coin.png'; // Change the file extension as per your actual file
     }
-
+    console.log(imageUrl);
     $('#selected-image').attr("src", imageUrl);
     $('#selected-image').css("display", "block");
+
+ // when event is receieved, print out the 3 pieces of information 
+    console.log(`you got the ${selectedImage}: ${rain}, ${rose}, ${bitcoin}`)
 });
 
-async function selectRandomImage() {
-    await contractWithSigner.getImage();
-  }
-    // when event is receieved, print out the 3 pieces of information 
+await displayImageCounts();
 }
-    
+
+async function displayImageCounts() {
+    const rainCount = await contract.getRain();
+    const roseCount = await contract.getRose();
+    const bitcoinCount = await contract.getBitcoin();
+
+    renderImages('rain.png', rainCount, '#rain-container');
+    renderImages('rose.png', roseCount, '#rose-container');
+    renderImages('coin.png', bitcoinCount, '#bitcoin-container');
+
+}
+
+async function renderImages(imageSrc, count, containerSelector) {
+    const container = $(containerSelector);
+    container.empty();  // Clear previous images
+
+}
+
+
+    // render rain
+    for (let i = 0; i < rainCount; i++) {
+        const img = $('<img>').attr('src', 'rain.png');
+        container.append(img);
+    }
+
+    // render rose
+    for (let i = 0; i < roseCount; i++) {
+        const img = $('<img>').attr('src', 'rose.png');
+        container.append(img);
+    }
+
+    // render bitcoin
+    for (let i = 0; i < bitcoinCount; i++) {
+        const img = $('<img>').attr('src', 'coin.png');
+        container.append(img);
+    }
+
+    for (let i = 0; i < count; i++) {
+        const img = $('<img>').attr('src', imageSrc).addClass('falling');
+        container.append(img);
+    }
+
+
 

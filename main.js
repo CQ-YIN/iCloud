@@ -62,29 +62,24 @@ async function renderImages(imageSrc, count, containerSelector) {
 
 }
 
-
     // render rain
     for (let i = 0; i < rainCount; i++) {
-        const img = $('<img>').attr('src', 'rain.png');
+        const img = $('<img>').attr('src', 'rain.png').addClass('falling');
         container.append(img);
     }
 
     // render rose
     for (let i = 0; i < roseCount; i++) {
-        const img = $('<img>').attr('src', 'rose.png');
+        const img = $('<img>').attr('src', 'rose.png').addClass('falling');
         container.append(img);
     }
 
     // render bitcoin
     for (let i = 0; i < bitcoinCount; i++) {
-        const img = $('<img>').attr('src', 'coin.png');
+        const img = $('<img>').attr('src', 'coin.png').addClass('falling');
         container.append(img);
     }
 
-    for (let i = 0; i < count; i++) {
-        const img = $('<img>').attr('src', imageSrc).addClass('falling');
-        container.append(img);
-    }
 
 
 

@@ -40,10 +40,10 @@ async function main() {
 
  // when event is receieved, print out the 3 pieces of information 
     console.log(`you got the ${selectedImage}: ${rain}, ${rose}, ${bitcoin}`)
-});
-
-await displayImageCounts();
+    });
 }
+
+
 
 async function displayImageCounts() {
     const rainCount = await contract.getRain();
@@ -56,29 +56,19 @@ async function displayImageCounts() {
 
 }
 
-async function renderImages(imageSrc, count, containerSelector) {
+function renderImages(imageSrc, count, containerSelector) {
     const container = $(containerSelector);
     container.empty();  // Clear previous images
 
-}
-
     // render rain
-    for (let i = 0; i < rainCount; i++) {
-        const img = $('<img>').attr('src', 'rain.png').addClass('falling');
+    for (let i = 0; i < count; i++) {
+        const img = document.createElement('img')
+        img.src = imageSrc
+        img.className = 'falling'
+        //const img = $('<img>').attr('src', imageSrc).addClass('falling');
         container.append(img);
     }
-
-    // render rose
-    for (let i = 0; i < roseCount; i++) {
-        const img = $('<img>').attr('src', 'rose.png').addClass('falling');
-        container.append(img);
-    }
-
-    // render bitcoin
-    for (let i = 0; i < bitcoinCount; i++) {
-        const img = $('<img>').attr('src', 'coin.png').addClass('falling');
-        container.append(img);
-    }
+}
 
 
 

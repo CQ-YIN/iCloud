@@ -1,13 +1,23 @@
-let contractAddress = "0x5656001feE8a9F5528256065E8b95Ae5143DBcdC";
+let contractAddress = "0x87FDdeC19734393f7B0e8d86D50847fD2A6a061B";
 let contractABI = [
 	{
 		"inputs": [],
-		"name": "getImage",
+		"name": "getRandomNumbers",
 		"outputs": [
 			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_rain",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_rose",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_bitcoin",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "nonpayable",
@@ -136,6 +146,35 @@ let contractABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "numberContainer",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "rain",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rose",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "bitcoin",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "rain",
 		"outputs": [
@@ -155,6 +194,48 @@ let contractABI = [
 			{
 				"internalType": "uint256",
 				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "transaction",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "transactionList",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "rain",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rose",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "bitcoin",
 				"type": "uint256"
 			}
 		],

@@ -38,16 +38,7 @@ button {
 }
 
 .falling {
-    animation: fall 1s ease-in-out forwards;
-}
-
-#rain-container, #rose-container, #bitcoin-container {
-    display: inline-block;
-    margin: 20px;
-    vertical-align: top;
-}
-
-img {
-    display: block;
-    margin: 10px auto;
+    width: 20px; /* or whatever size you like */
+    height: auto;
+    animation: fall 5s linear infinite;
 }

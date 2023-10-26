@@ -38,11 +38,6 @@ document.querySelector('#newImageButton').addEventListener('click', function() {
 
     requestAnimationFrame(smoothScroll);
 });
-
-    
-
-
-
     
 // Event listener for imageSelected event
 contract.on("imageSelected", (selectedImage, rain, rose, bitcoin) => {
@@ -209,6 +204,9 @@ container.append(img);
         } catch (error) {
             console.error("Error fetching previous totals:", error);
         }
+
+        
+        
     }
     
     

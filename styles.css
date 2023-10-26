@@ -1,7 +1,15 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: large;
+    font-size:  1rem;
+
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 3; /* This will ensure the text is above the images and on top of h1 */
 
 }
 
@@ -15,15 +23,15 @@ body {
     line-height: .8;
 }
 
-input {
-    font-family: inherit;
-    width: 60%;
-}
 
 button {
-    font-family: 'Montserrat', sans-serif;
     font-size: large;
     shape-outside: none; 
+}
+
+div {
+    position: relative;
+    font-size: medium;
 }
 
 @keyframes fall {
@@ -38,7 +46,34 @@ button {
 }
 
 .falling {
-    width: 20px; /* or whatever size you like */
-    height: auto;
-    animation: fall 5s linear infinite;
+    opacity: 0.7;
+    animation: fall 100s linear infinite;
+}
+
+.falling:nth-child(odd) {
+    animation-delay: 1s;
+}
+
+.falling:nth-child(even) {
+    animation-delay: 2s;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+}
+
+#mainTitle {
+    position: relative;
+    z-index: 1;
+}
+
+#rain-container, #rose-container, #bitcoin-container {
+    position: relative;
+    z-index: 2;
+}
+
+#aboveText {
+    position: relative;
+    z-index: 3; /* This will ensure the text is above the images and on top of h1 */
 }

@@ -70,3 +70,4 @@ function renderImages(imageSrc, count, containerSelector) {
         container.append(img);
     }
 }
+

@@ -6,26 +6,43 @@
     <script src="lib/ethers-5.6.umd.min.js"></script>
     <script src="lib/jquery-3.6.1.min.js"></script>
     <script src="abi.js"></script>
-    <script src="main2.js" defer></script>
+    <script src="main3.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Orbitron&display=swap" rel="stylesheet">
     <title>iCloud</title>
 </head>
 
 <body>
     <center>
-    <h1>iCloud - How are you?</h1>
+    <h1 id="mainTitle">iCloud - Want more?</h1>
 
     <button id="newImageButton">
-    <img src="cloud.png" alt="Click me" style="width:35%;">
+    <img src="cloud.png" alt="Click me" style="width:37.8%;">
     </button>
 
 
-        <!-- <img src="//picsum.photos/id/100/200" alt="placeholder" id="selected-image"> -->
-        
-            <div id="rain-container" style="width: 100px;"></div>
-            <div id="rose-container" style="width: 100px;"></div>
-            <div id="bitcoin-container" style="width: 100px;"></div>
-            
+        <!-- <img src="//picsum.photos/id/100/200" alt="placeholder" id="selected-image">  -->
+             
+    <div class="text"> 
+        <h2>YOUR DROPS</h2>
+        <p>Rain: <span id="userRain">0</span></p>
+        <p>Rose: <span id="userRose">0</span></p>
+        <p>Bitcoin: <span id="userBitcoin">0</span></p>
+    </div>
+
+    <!-- Display previous totals stored in the blockchain //not working -->
+    <div class="text"> 
+        <h2>PREVIOUS DROPS</h2>
+        <p>Rain: <span id="totalRain">0</span></p>
+        <p>Rose: <span id="totalRose">0</span></p>
+        <p>Bitcoin:  <span id="totalBitcoin">0</span></p>
+    </div>
+
+    <div id="rain-container"></div>
+    <div id="rose-container"></div>
+    <div id="bitcoin-container"></div>
 
     </center>
    

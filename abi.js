@@ -1,4 +1,4 @@
-let contractAddress = "0x7cB5686900Ee2d1fCBc9Fda17b1EFC230dCe36e3";
+let contractAddress = "0xEbBE0Dcb170Ed08D401F448979A1DeD21C3364DD";
 let contractABI = [
 	{
 		"inputs": [],
@@ -146,6 +146,58 @@ let contractABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "getTotals",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_rain",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_rose",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_bitcoin",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "getUserAmounts",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_rain",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_rose",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_bitcoin",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -202,6 +254,29 @@ let contractABI = [
 	},
 	{
 		"inputs": [],
+		"name": "totalAmounts",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "rain",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rose",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "bitcoin",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "transaction",
 		"outputs": [
 			{
@@ -222,6 +297,35 @@ let contractABI = [
 			}
 		],
 		"name": "transactionList",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "rain",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rose",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "bitcoin",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "userAmounts",
 		"outputs": [
 			{
 				"internalType": "uint256",

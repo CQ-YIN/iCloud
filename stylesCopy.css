@@ -1,0 +1,24 @@
+
+body {
+    margin-top: 22%;
+    font-family: 'Montserrat', sans-serif;
+    font-size:  1rem;
+    background-color: black;
+    color: aliceblue;
+
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 3; /* This will ensure the text is above the images and on top of h1 */
+
+}
+
+#messages {
+    margin-top: 2rem;
+}
+
+
+

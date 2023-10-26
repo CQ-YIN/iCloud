@@ -24,7 +24,7 @@ body {
 }
 
 
-button {
+.button {
     outline: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
@@ -32,6 +32,14 @@ button {
     z-index: 4; /* This will ensure the text is above the images and on top of h1 */
 }
 
+.buttont {
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 30px;
+    color: #070707;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 12px;
+}
 div {
     position: relative;
     font-size: medium;

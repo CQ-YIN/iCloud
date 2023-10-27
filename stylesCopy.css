@@ -8,18 +8,7 @@ body {
 
 }
 
-.text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    position: relative;
-    z-index: 3; /* This will ensure the text is above the images and on top of h1 */
-   overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-line-clamp: 2; /* number of lines to show */
-           line-clamp: 2;
-   -webkit-box-orient: vertical;
-}
+
 
 
 

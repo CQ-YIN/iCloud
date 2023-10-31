@@ -3,34 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesCopy.css">
+    <script src="lib/ethers-5.6.umd.min.js"></script>
+    <script src="lib/jquery-3.6.1.min.js"></script>
+    <script src="abi.js"></script>
+    <script src="main3.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Orbitron&display=swap" rel="stylesheet">
-    <title>iCloud - 404</title>
+    <title>iCloud</title>
 </head>
 
 <body>
   
     <center>
-      
+    <h1 id="mainTitle">iCloud - KEEP GOING?</h1>
 
-    <h1>STOP!
-        <br> YOU GET NOTHING HERE.
-        <br> SO WHY DON'T YOU EMBRACE THE REALITY 
-        <br> AND TRY TO
-        <br> CREATE SOME MEANINGFUL 
-        <br> EXPERIENCES?
-       </h1>
+    <button id="newImageButton">
+    <img src="cloud.png" alt="Click me" style="width:52%;">
+    </button>
 
-       <audio controls autoplay hidden>
-        <source src="jazz2.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
+        <!-- <img src="//picsum.photos/id/100/200" alt="placeholder" id="selected-image">  -->
+             
+    <div class="text"> 
+        <h2>YOUR DROPS</h2>
+        <p>Rain: <span id="userRain">0</span></p>
+        <p>Rose: <span id="userRose">0</span></p>
+        <p>Bitcoin: <span id="userBitcoin">0</span></p>
+    </div>
 
+    <!-- Display previous totals stored in the blockchain //not working -->
+    <div class="text"> 
+        <h2>EVERYONE'S TOTAL DROPS</h2>
+        <p>Rain: <span id="totalRain">0</span></p>
+        <p>Rose: <span id="totalRose">0</span></p>
+        <p>Bitcoin:  <span id="totalBitcoin">0</span></p>
+    </div>
+
+    <div id="rain-container"></div>
+    <div id="rose-container"></div>
+    <div id="bitcoin-container"></div>
+
+ 
+    <div class="button-container">
+        <a onclick="window.open('','page','location=0,toolbar=0,...')" href="indexBLACK.html" target="page">
+            <button class="buttont">SURE</button>
+        </a>
+    </div>
 
     </center>
-
-
+   
 </body>
 </html>

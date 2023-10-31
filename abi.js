@@ -1,4 +1,4 @@
-let contractAddress = "0xEbBE0Dcb170Ed08D401F448979A1DeD21C3364DD";
+let contractAddress = "0xF2a737ce69138604130752924D795E7e73906ab0";
 let contractABI = [
 	{
 		"inputs": [],
@@ -96,45 +96,6 @@ let contractABI = [
 	{
 		"inputs": [],
 		"name": "bitcoin",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getBitcoin",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getRain",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getRose",
 		"outputs": [
 			{
 				"internalType": "uint256",
